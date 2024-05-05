@@ -36,7 +36,9 @@ Object-Oriented Programming Pillars:
 1. Polymorphism:
      Definition: Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables the same method name to be used for different classes, providing flexibility and extensibility.
      Usage in Code: In the provided code, polymorphism is utilized through method overriding. Subclasses of `AttachmentSuggestorBase` such as `MW3AttachmentSuggestor` override the `create_widgets()` and `open_new_window()` methods to provide specific implementations while still adhering to the base class interface.
+   
    ![image](https://github.com/DovydasBudvitis/Kursinis-MW3-attachment-suggestor-EKf-23/assets/168678893/a16b3a20-d9ed-4c75-a2b6-4f56bdd92f73)
+   
 3. Abstraction:
      Definition: Abstraction refers to hiding the complex implementation details and showing only the necessary features of an object. It allows developers to focus on the essential aspects of an object without worrying about its internal workings.
      Usage in Code: The `AttachmentSuggestorBase` class serves as an abstraction by defining methods like `create_widgets()` and `open_new_window()` without specifying their implementations. Subclasses are responsible for providing concrete implementations, allowing the base class to be used as a template for different attachment suggestor applications.
