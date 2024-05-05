@@ -1,0 +1,3 @@
+TriggerActions: BRYSON HTA
+Stocks: WOLFHOUND CARBINE STOCK
+RearGrips: STALWART GRIP
