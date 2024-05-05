@@ -17,7 +17,9 @@ How to Run the Program
     3. Navigate to the directory containing the MW3_Attachment_Suggestor.py file.
     4. Open a terminal or command prompt in that directory.
     5. Run the following command:
+    
 ![image](https://github.com/DovydasBudvitis/Kursinis-MW3-attachment-suggestor-EKf-23/assets/168678893/8d57eaae-52a3-46fc-ae46-49f79f959c31)
+
     6. The application window will open, allowing you to interact with the MW3 Attachment Suggestor.
 
 How to Use the Program
