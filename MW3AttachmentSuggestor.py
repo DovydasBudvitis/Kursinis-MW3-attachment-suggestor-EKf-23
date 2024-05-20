@@ -121,7 +121,7 @@ class MW3AttachmentSuggestor(AttachmentSuggestorBase):
         self.label = self._gui_factory.create_label(self.master, text='MW3 Attachment suggestor', font=('Terminal', 20, 'bold'),
                                                      fg='red', bg='black', relief=RAISED, bd=7)
         self.label.pack()
-        icon = PhotoImage(file='MW3ICON2.png')
+        icon = PhotoImage(file='images/MW3ICON2.png')
         self.master.iconphoto(True, icon)
         self.master.config(background='black')
 
