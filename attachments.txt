@@ -1,0 +1,3 @@
+RearGrips: CHORUS GEN4 GRIP
+Stocks: KV FACTORY STOCK
+TriggerActions: XRK LIGHTNING FIRE

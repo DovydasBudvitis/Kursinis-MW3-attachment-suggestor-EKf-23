@@ -2,17 +2,44 @@ from tkinter import *
 from tkinter import messagebox
 import WeaponEnums
 from AttachmentSuggestor import AttachmentSuggestion
+from functools import wraps
+
+# Singleton decorator
+def singleton(cls):
+    """Decorator to make a class a Singleton."""
+    instances = {}
+    
+    @wraps(cls)
+    def get_instance(*args, **kwargs):
+        if cls not in instances:
+            instances[cls] = cls(*args, **kwargs)
+        return instances[cls]
+    
+    return get_instance
+
+# Decorator for logging
+def log_creation(func):
+    """Decorator to log the creation of GUI elements."""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        element = func(*args, **kwargs)
+        print(f"Created {element.__class__.__name__} with options: {kwargs}")
+        return element
+    return wrapper
 
 class GUIElementFactory:
     """Factory class for creating GUI elements."""
+    @log_creation
     def create_label(self, master, **kwargs):
         """Create a Label widget."""
         return Label(master, **kwargs)
 
+    @log_creation
     def create_button(self, master, **kwargs):
         """Create a Button widget."""
         return Button(master, **kwargs)
 
+    @log_creation
     def create_listbox(self, master, **kwargs):
         """Create a Listbox widget."""
         return Listbox(master, **kwargs)
@@ -86,6 +113,7 @@ class AttachmentSuggestorBase:
         """Property to access the attachments."""
         return self._attachments
 
+@singleton
 class MW3AttachmentSuggestor(AttachmentSuggestorBase):
     """Class for MW3 attachment suggestion."""
     def create_widgets(self):
